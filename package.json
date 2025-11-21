@@ -1,0 +1,19 @@
+{
+  "name": "automacaogithub",
+  "version": "1.0.0",
+  "scripts": {
+    "test:unit": "jest",
+    "test:e2e": "cypress run",
+    "cypress:open": "cypress open",
+    "test:all": "npm run test:unit && npm run test:e2e"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "cypress": "15.7.0",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-xpath": "^2.0.1",
+    "jest": "^29.7.0"
+  }
+}
