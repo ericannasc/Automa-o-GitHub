@@ -97,18 +97,6 @@ npm run test:all
 -   Preenche email e senha\
 -   Valida autenticação e nome do usuário
 
-**Exemplo de comando customizado (`cypress/support/commands.js`):**
-
-``` js
-Cypress.Commands.add("loginGitHub", () => {
-  cy.visit("https://github.com/login");
-  cy.get('input[name="login"]').type(Cypress.env("EMAIL"));
-  cy.get('input[name="password"]').type(Cypress.env("PASSWORD"), { log: false });
-  cy.get('input[name="commit"]').click();
-  cy.url().should("include", "github.com");
-});
-```
-
 ------------------------------------------------------------------------
 
 ### **Navegação**
@@ -125,17 +113,6 @@ Cypress.Commands.add("loginGitHub", () => {
 -   Preenche campo obrigatório\
 -   Submete formulário\
 -   Valida URL e nome do repositório criado
-
-**Exemplo de geração de nome (`utils/utils.js`):**
-
-``` js
-function gerarNomeRepositorio(base) {
-  const random = Math.floor(Math.random() * 1000);
-  return `${base}-${Date.now()}-${random}`;
-}
-
-module.exports = { gerarNomeRepositorio };
-```
 
 ------------------------------------------------------------------------
 
